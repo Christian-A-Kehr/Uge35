@@ -1,0 +1,70 @@
+Fundamental Network Topics
+
+You can do most of the exercises in this document by yourself, but they are meant as exercises with a supplementary discussion in the class, so you will gain a lot more from participating in the class.
+Understanding Basic Network Terms like IP, TCP/IP, DNS, DHCP and more.
+Most of these exercises are meant to be answered with text, so write down your reply so you will remember.
+
+•	What is your public IP address right now, and how did you find it?
+10.50.138.50 , kommandoprompt / ipconfig / under wireless IPv4 adress 
+
+•	What is your private IP address right now (do this both at home and in school), and who/what gave you that address?
+192.168.51.1 kommandoprompt / ipconfig / under wireless IPv4 adress 
+
+•	What’s special about these address ranges?
+10.0.0.0 – 10.255.255.255 = Single Class A. 24 bit
+172.16.0.0 – 172.31.255.255 = Contiguous range of 16 Class B blocks.
+192.168.0.0 – 192.168.255.255 = Contiguous range of 256 Class C blocks.
+
+•	What’s special about this ip-address: 127.0.0.1? 
+ egen computer/ local host. 
+
+•	What kind of service would you expect to find on a server using these ports: 
+22: Secure Shell uses port 22. SSH servers listen on this port for incoming login requests from remote clients.
+23: governs telnet, a text-based system for logging into remote systems. Although modern remote-access approaches rely on Secure Shell on port 22, port
+25: governs the Simple Mail Transfer Protocol — the tool by which an email on your computer makes its way to a mail server, and then from that server to the larger internet for routing and delivery.
+53: Domain Name System (DNS)
+80: HTTP
+443: HTTPS
+
+•	What is the IP address of studypoints.dk and how did you find it?
+KommandoPrompt / tracert studypoints.dk => 165.227.137.75
+
+•	If you write https://studypoints.dk in your browser, how did “it” figure out that it should go to the IP address you discovered above?
+
+
+•	Explain shortly the purpose of an ip-address and a port-number and why we need both
+Ip- address = hvor skal adresse sin forspørgelse/efterspørgelse 
+Port = hvad skal man gøre brug af ved afdressen (hvilken application)
+
+•	What is your (nearest) DNS server,?
+fec0:0:0:ffff::1%1
+
+•	What is (conceptually) the DNS system and the purpose with a DNS Server?
+
+
+•	What is your current Gateway, and how did you find it?
+KommandoPromt / Ipconfig /all => 10.50.128.1
+
+•	What is the address of your current DHCP-Server, and how did you find it?
+KommandoPromt / Ipconfig /all  => 10.255.1.10
+
+
+•	Explain (conceptually) about the TCP/IP-protocol stack
+TCP 
+Langsom, eftersom den skal sende response for modtagelse, Større header 
+        Løser belastning ved: 
+1. Windows size: ser på hvor meget plads modtageren har og regulere hastigheden. 
+2. Kontrol af netværksstyrke: styres via en timer, hvis ingen bekæftelse er givet antages det at pakken ikke er modtaget, og derved gensendes pakken igen ved timer udløb. (kan ske dublet, tcp protocol styre at pakken derved smides væk)  
+
+Ip upålideligt, gør hvad den kan for at finde vejen til pakken (uden garanti for succes)
+
+•	Explain about the HTTP Protocol (the following exercises will go much deeper into this protocol)
+HTTP er en protocol (ordensregeler) for anskaffelse af resuouser  f.esk. HTML doc, dette sker ofte gennem metoder som get,post, put og delete  
+
+•	Explain (conceptually) how HTTP and TCP/IP are connected (what can HTTP do, and where does it fit into TCP/IP)
+HTTP  =  sikre forbindelsen mellem to enheder og at de taler sammen korrekt 
+HTTP/TCP = Sikre at en bruger kan sende/modtage en data pakke, f.eks. e.mail, chat, fildeling.
+Ved anvendelse af TCP stilles der yderligere en garanti for modtagelse og rækkefølgen som denne pakke ankommer i. 
+
+
+
