@@ -5,10 +5,12 @@ Understanding Basic Network Terms like IP, TCP/IP, DNS, DHCP and more.
 Most of these exercises are meant to be answered with text, so write down your reply so you will remember.
 
 •	What is your public IP address right now, and how did you find it?
-10.50.138.50 , kommandoprompt / ipconfig / under wireless IPv4 adress 
+5.179.80.204 from : https://www.whatismyip.com/
+Router Private IP: 10.50.137.1 http://whatsmyrouterip.com/
 
 •	What is your private IP address right now (do this both at home and in school), and who/what gave you that address?
 192.168.51.1 kommandoprompt / ipconfig / under wireless IPv4 adress 
+10.50.138.50 , kommandoprompt / ipconfig / under wireless IPv4 adress
 
 •	What’s special about these address ranges?
 10.0.0.0 – 10.255.255.255 = Single Class A. 24 bit
@@ -16,10 +18,11 @@ Most of these exercises are meant to be answered with text, so write down your r
 192.168.0.0 – 192.168.255.255 = Contiguous range of 256 Class C blocks.
 
 •	What’s special about this ip-address: 127.0.0.1? 
- egen computer/ local host. 
+ egen computer/ local host (loopback) 
+(bruges som en test, da den returneres af router, derved simuleres et signal udefra).  
 
 •	What kind of service would you expect to find on a server using these ports: 
-22: Secure Shell uses port 22. SSH servers listen on this port for incoming login requests from remote clients.
+22, = Secure Shell uses port 22. SSH servers listen on this port for incoming login requests from remote clients.
 23: governs telnet, a text-based system for logging into remote systems. Although modern remote-access approaches rely on Secure Shell on port 22, port
 25: governs the Simple Mail Transfer Protocol — the tool by which an email on your computer makes its way to a mail server, and then from that server to the larger internet for routing and delivery.
 53: Domain Name System (DNS)
@@ -30,17 +33,22 @@ Most of these exercises are meant to be answered with text, so write down your r
 KommandoPrompt / tracert studypoints.dk => 165.227.137.75
 
 •	If you write https://studypoints.dk in your browser, how did “it” figure out that it should go to the IP address you discovered above?
+Ved at kontrollere DNS server en efter en, findes den rigtige server . 
 
-
-•	Explain shortly the purpose of an ip-address and a port-number and why we need both
-Ip- address = hvor skal adresse sin forspørgelse/efterspørgelse 
+•	Explain short the purpose of an ip-address and a port-number and why we need both
+Ip- address = hvor skal adresse sin forespørgelse/efterspørgelse 
 Port = hvad skal man gøre brug af ved afdressen (hvilken application)
 
 •	What is your (nearest) DNS server,?
-fec0:0:0:ffff::1%1
+KommandoPromt / Ipconfig /all giver 4 dns server at vælge i mellem derefter kan man køre tracert og se hvilken som giver flest hops. 
+10.3.1.1 
+ 
 
 •	What is (conceptually) the DNS system and the purpose with a DNS Server?
-
+DNS-server eller navneserver er en server placeret på et IP-baseret datanet
+ formålet er at tager sig af oversættelsen af de navne man normalt arbejder med på Internettet.
+f.eks. studypoints.dk henviser til en ip-adresse mm. Dette sker så protokollerne kan træde i kraft. 
+DNS Server tildeler private ip-adresser og gateway til public net. 
 
 •	What is your current Gateway, and how did you find it?
 KommandoPromt / Ipconfig /all => 10.50.128.1
@@ -59,12 +67,10 @@ Langsom, eftersom den skal sende response for modtagelse, Større header
 Ip upålideligt, gør hvad den kan for at finde vejen til pakken (uden garanti for succes)
 
 •	Explain about the HTTP Protocol (the following exercises will go much deeper into this protocol)
-HTTP er en protocol (ordensregeler) for anskaffelse af resuouser  f.esk. HTML doc, dette sker ofte gennem metoder som get,post, put og delete  
+HTTP er en protocol (ordensregeler) for anskaffelse af resuouser  f.esk. HTML doc, dette sker ofte gennem metoder som get,post, put og delete  via request/response 
 
 •	Explain (conceptually) how HTTP and TCP/IP are connected (what can HTTP do, and where does it fit into TCP/IP)
-HTTP  =  sikre forbindelsen mellem to enheder og at de taler sammen korrekt 
+HTTP  =  skaber forbindelsen mellem to enheder og at de taler sammen korrekt via metoder som get/post.  
 HTTP/TCP = Sikre at en bruger kan sende/modtage en data pakke, f.eks. e.mail, chat, fildeling.
 Ved anvendelse af TCP stilles der yderligere en garanti for modtagelse og rækkefølgen som denne pakke ankommer i. 
-
-
 
