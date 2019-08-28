@@ -1,0 +1,42 @@
+EX1
+Response 
+Request URL: http://localhost:8080/HTTPProtocoluge2/
+Request Method: GET
+Status Code: 304 
+
+GET /HTTPProtocoluge2/ HTTP/1.1
+
+Explain what you see:
+Her ser vi request og response, i dette tilfælde får man status code 304 som er en redirection. 
+
+EX2
+HTTP keep-alive, a.k.a., HTTP persistent connection, 
+is an instruction that allows a single TCP connection to remain open for multiple HTTP 
+requests/responses.
+
+By default, HTTP connections close after each request. 
+When someone visits your site, their browser needs to create new connections to request
+each of the files that make up your web pages 
+(e.g. images, Javascript, and CSS stylesheets), a process that can lead to high page load times.
+
+Dvs: Man opretter færre forbindelser, og derved øges effektiviteten i form af hastighed og ydelse. 
+
+ex2:
+The two HTTP-request you see: 
+Redicret:  
+Request URL: http://localhost:8080/HTTPProtocoluge2/redirect
+Request Method: GET
+Status Code: 302 
+
+r.html: 
+Request URL: http://localhost:8080/HTTPProtocoluge2/redirect
+Request Method: GET
+Status Code: 302
+
+How the browser knew where to go in the second request:
+Gennem Http gives adgang til redicrets metoden"doGet" i dette tilfælde har vi 
+placeret et fast response "response.sendRedirect("r.html")" som altid vil føre til 
+uml: http://localhost:8080/HTTPProtocoluge2/r.html
+
+exc: 3a.
+ 
