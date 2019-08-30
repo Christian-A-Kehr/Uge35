@@ -23,9 +23,10 @@ Which of the weekly learnings goals were covered by your solution:
 Onssdag:
 How far you got with a solution: exc 7 (ish)
 
-Where the solution to each exercise can be found in your commit
+Where the solution to each exercise can be found in your commit: 
 Vælg 2 onsdag og se txt fil "status code"
-Which of the weekly learnings goals were covered by your solution
+Which of the weekly learnings goals were covered by your solution:
+ HTTP Headers, HTTP statuskoder og de forskellige ranges 2xx, 3xx, 4xx og 5xx
 
 
 Torsdag:
