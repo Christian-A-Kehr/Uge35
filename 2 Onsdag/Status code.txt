@@ -77,3 +77,11 @@ Referrer Policy: no-referrer-when-downgrade
            to hide the existence of a resource from an unauthorized client. 
            This response code is probably the most famous one due to its
            frequent occurrence on the web.
+
+5)
+gå til exc 5, i source Packages
+6) 
+gå til exc 6 i wep page
+7)
+Efter punkt c gik alt i baglås, selv efter delte/refactor ville projektet stadigvæk ikke fungere
+
