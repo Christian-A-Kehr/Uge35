@@ -1,4 +1,4 @@
-EX1
+	EX1
 Response 
 Request URL: http://localhost:8080/HTTPProtocoluge2/
 Request Method: GET
@@ -39,4 +39,41 @@ placeret et fast response "response.sendRedirect("r.html")" som altid vil føre 
 uml: http://localhost:8080/HTTPProtocoluge2/r.html
 
 exc: 3a.
- 
+
+Explain the first two request monitored (notice where you requested to go, and where you actually ended).
+Provisional headers are shown
+Referer: https://studypoints.info/
+i App.js preview linje 31 bliver vi redirectTo /view1  
+
+4a) 
+Status Codes (5xx)
+Request URL: http://localhost:8080/HTTPProtocoluge2/Ups
+Request Method: GET
+Status Code: 500  
+
+4b)
+request URL: http://localhost:8080/i_dont_exist
+Request Method: GET
+Status Code: 404 
+Remote Address: [::1]:8080
+Referrer Policy: no-referrer-when-downgrade
+
+4c) Status Codes - Ranges
+200 OK The request has succeeded. The meaning of the success depends on the HTTP method:
+302 Found :This response code means that the URI of requested resource has been changed temporarily. 
+           New changes in the URI might be made in the future.
+           Therefore, this same URI should be used by the client in future requests.
+
+403 Forbidden
+           The client does not have access rights to the content, i.e. they are unauthorized,
+           so server is rejecting to give proper response.
+           Unlike 401, the client's identity is known to the server.
+404 Not Found
+           The server can not find requested resource. In the browser,
+           this means the URL is not recognized. 
+           In an API, this can also mean that the endpoint is valid 
+           but the resource itself does not exist.
+           Servers may also send this response instead of 403
+           to hide the existence of a resource from an unauthorized client. 
+           This response code is probably the most famous one due to its
+           frequent occurrence on the web.
